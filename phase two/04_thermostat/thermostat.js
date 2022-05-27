@@ -41,6 +41,12 @@ class Thermostat {
     this.temperature = 20;
   }
 
+  currentEnergyUsage() {
+    if (this.temperature < 18) {
+      return `low-usage`;
+    }
+  }
+
 }
 
 module.exports = Thermostat;
