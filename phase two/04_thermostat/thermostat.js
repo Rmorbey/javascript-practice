@@ -34,11 +34,15 @@ class Thermostat {
       this.PSM = true;
     } else if (status === false) {
       this.PSM = false;
-    } 
+    }
   }
 
   reset() {
-    this.temperature = 20;
+    if ((this.PSM = true) && (this.temperature > 25)) {
+      this.temperature = 20;
+    } else {
+      this.temperature = 20;
+    }
   }
 
   currentEnergyUsage() {

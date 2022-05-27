@@ -26,17 +26,6 @@ describe(`Thermostat`, () => {
       expect(thermostat.down()).toEqual(`Temperature can't go below 10.`)
       expect(thermostat.getTemperature()).toBe(10)
     });
-
-    // it(`the maximum possible temp is 32, it can't go above 32`, () => {
-    //   thermostat.setPowerSavingMode(false);
-    //   for (let i = 0 ; i < 12 ; i++) {
-    //     thermostat.up();
-    //   }
-    //   thermostat.up();
-    //   // an error should be thrown here saying `can't go above 32 degrees, just dunno how to do it`
-    //   expect(thermostat.getTemperature()).toBe(32)
-    // });
-
   });
 
   describe(`.up`, () => {
@@ -87,14 +76,15 @@ describe(`Thermostat`, () => {
       expect(thermostat.getTemperature()).toBe(32)
     });
 
-    // it(`when PowerSavingMode is turned on when the temp is above 25, it will set the temp back to 25`, () => {
-    //   thermostat.setPowerSavingMode(false);
-    //   for (let i = 0 ; i < 10 ; i++) {
-    //     thermostat.up();
-    //   }
-    //   thermostat.setPowerSavingMode(true);
-    //   expect(thermostat.getTemperature()).toBe(25)
-    // });
+    it(`when PowerSavingMode is turned on when the temp is above 25, it will set the temp back to 25`, () => {
+      let thermostat = new Thermostat();
+      thermostat.setPowerSavingMode(false);
+      for (let i = 0 ; i < 10 ; i++) {
+        thermostat.up();
+      }
+      thermostat.setPowerSavingMode(true);
+      expect(thermostat.getTemperature()).toBe(25)
+    });
   });
   
   describe(`.reset`, () => {
