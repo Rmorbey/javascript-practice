@@ -126,12 +126,13 @@ describe(`Thermostat`, () => {
       expect(thermostat.currentEnergyUsage()).toEqual('low-usage')
     });
 
-    // it(`tells you currentEnergyUsage is medium-usage if equal to or below 25`, () => {
-    //   for (let i = 0 ; i < 5 ; i++) {
-    //     thermostat.up();
-    //   }
-    //   expect(thermostat.currentEnergyUsage()).toEqual('medium-usage')
-    // });
+    it(`tells you currentEnergyUsage is medium-usage if equal to or below 25`, () => {
+      let thermostat = new Thermostat();
+      for (let i = 0 ; i < 5 ; i++) {
+        thermostat.up();
+      }
+      expect(thermostat.currentEnergyUsage()).toEqual('medium-usage')
+    });
 
     // it(`tells you currentEnergyUsage is high-usage if above 26`, () => {
     //   for (let i = 0 ; i < 6 ; i++) {
