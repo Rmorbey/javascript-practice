@@ -9,11 +9,12 @@ describe(`Thermostat`, () => {
       expect(thermostat.getTemperature()).toBe(20)
     });
 
-    // it(`returns current temperature`, () => {
-    //   thermostat.up();
-    //   thermostat.up();
-    //   expect(thermostat.getTemperature()).toBe(22)
-    // });
+    it(`returns current temperature`, () => {
+      let thermostat = new Thermostat();
+      thermostat.up();
+      thermostat.up();
+      expect(thermostat.getTemperature()).toBe(22)
+    });
 
     it(`the minimum possible temp is 10, it can't go below 10`, () => {
       let thermostat = new Thermostat();
