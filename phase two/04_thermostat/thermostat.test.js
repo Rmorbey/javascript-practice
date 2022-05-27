@@ -15,14 +15,16 @@ describe(`Thermostat`, () => {
     //   expect(thermostat.getTemperature()).toBe(22)
     // });
 
-    // it(`the minimum possible temp is 10, it can't go below 10`, () => {
-    //   for (let i = 0 ; i < 10 ; i++) {
-    //     thermostat.down();
-    //   }
-    //   thermostat.down();
-    //   // an error should be thrown here saying `can't go below 10 degrees, just dunno how to do it`
-    //   expect(thermostat.getTemperature()).toBe(10)
-    // });
+    it(`the minimum possible temp is 10, it can't go below 10`, () => {
+      let thermostat = new Thermostat();
+      for (let i = 0 ; i < 10 ; i++) {
+        thermostat.down();
+      }
+      thermostat.down();
+      
+      expect(thermostat.down()).toEqual(`Temperature can't go below 10.`)
+      expect(thermostat.getTemperature()).toBe(10)
+    });
 
     // it(`the maximum possible temp is 32, it can't go above 32`, () => {
     //   thermostat.setPowerSavingMode(false);
