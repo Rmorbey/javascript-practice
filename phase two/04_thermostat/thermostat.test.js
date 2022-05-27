@@ -96,24 +96,25 @@ describe(`Thermostat`, () => {
     // });
   });
   
-  // describe(`.reset`, () => {
-  //   it(`resets temp back to 20, or initial temp when temp is above 20`, () => {
-  //     for (let i = 0 ; i < 10 ; i++) {
-  //       thermostat.up();
-  //     }
-  //     thermostat.reset();
-  //     expect(thermostat.getTemperature()).toBe(20)
-  //   });
+  describe(`.reset`, () => {
+    it(`resets temp back to 20, or initial temp when temp is above 20`, () => {
+      let thermostat = new Thermostat();
+      for (let i = 0 ; i < 5 ; i++) {
+        thermostat.up();
+      }
+      thermostat.reset();
+      expect(thermostat.getTemperature()).toBe(20)
+    });
 
-  //   it(`resets temp back to 20, or initial temp when temp is below 20`, () => {
-  //     for (let i = 0 ; i < 10 ; i++) {
-  //       thermostat.down();
-  //     }
-  //     thermostat.reset();
-  //     expect(thermostat.getTemperature()).toBe(20)
-  //   });
+    // it(`resets temp back to 20, or initial temp when temp is below 20`, () => {
+    //   for (let i = 0 ; i < 10 ; i++) {
+    //     thermostat.down();
+    //   }
+    //   thermostat.reset();
+    //   expect(thermostat.getTemperature()).toBe(20)
+    // });
 
-  // });
+  });
 
   // describe(`.energyUsage`, () => {
   //   it(`tells you energyUsage is low-usage if below 18`, () => {
