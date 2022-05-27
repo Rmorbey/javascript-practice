@@ -62,18 +62,19 @@ describe(`Thermostat`, () => {
     });
 
     it(`PoweverSavingMode can be switched to false`, () => {
+      let thermostat = new Thermostat();
       thermostat.setPowerSavingMode(false);
       expect(thermostat.PSM).toBe(false)
     });
 
-    // it(`can be set to true (on), max temp is now 25`, () => {
-    //   for (let i = 0 ; i < 6 ; i++) {
-    //     thermostat.up();
-    //   }
-    //   // should throw error saying can't go above 25 while PowerSavingMode is on
-    //   thermostat.setPowerSavingMode(true);
-    //   expect(thermostat.getTemperature()).toBe(25)
-    // });
+    it(`can be set to true (on), max temp is now 25`, () => {
+      let thermostat = new Thermostat();
+      for (let i = 0 ; i < 6 ; i++) {
+        thermostat.up();
+      }
+      expect(thermostat.up()).toEqual(`PSM is on. Max temp: 25`)
+      expect(thermostat.getTemperature()).toBe(25)
+    });
 
     // it(`can be set to false (off), max temp is now 32`, () => {
     //   thermostat.setPowerSavingMode(false);
