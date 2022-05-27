@@ -57,7 +57,8 @@ describe(`Thermostat`, () => {
   describe(`.setPowerSavingMode`, () => {
     it(`PoweverSavingMode is on by default`, () => {
       let thermostat = new Thermostat();
-      expect(thermostat.setPowerSavingMode(true)).toBe(true)
+
+      expect(thermostat.PSM).toBe(true)
     });
 
     // it(`PoweverSavingMode can be switched to false`, () => {

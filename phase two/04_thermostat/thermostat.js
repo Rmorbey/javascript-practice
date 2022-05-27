@@ -2,6 +2,7 @@ class Thermostat {
 
   constructor() {
     this.temperature = 20;
+    this.PSM = true;
   }
 
   getTemperature() {
@@ -17,6 +18,14 @@ class Thermostat {
       this.temperature --;
     } else {
       return `Temperature can't go below 10.`;
+    }
+  }
+
+  setPowerSavingMode(status) {
+    if (status === true) {
+      this.PSM = true;
+    } else (status === false); {
+      this.PSM = false;
     }
   }
 
