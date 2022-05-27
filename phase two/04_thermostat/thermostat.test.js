@@ -44,12 +44,12 @@ describe(`Thermostat`, () => {
     });
   });
 
-  // describe(`.down`, () => {
-  //   it(`decreases the temp by 1`, () => {
-  //     thermostat.down();
-  //     expect(thermostat.getTemperature()).toBe(19)
-  //   });
-  // });
+  describe(`.down`, () => {
+    it(`decreases the temp by 1`, () => {
+      thermostat.down();
+      expect(thermostat.getTemperature()).toBe(19)
+    });
+  });
 
   // describe(`.setPowerSavingMode`, () => {
   //   it(`PoweverSavingMode is on by default`, () => {
