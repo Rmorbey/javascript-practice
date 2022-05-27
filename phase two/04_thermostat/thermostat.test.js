@@ -106,36 +106,37 @@ describe(`Thermostat`, () => {
       expect(thermostat.getTemperature()).toBe(20)
     });
 
-    // it(`resets temp back to 20, or initial temp when temp is below 20`, () => {
-    //   for (let i = 0 ; i < 10 ; i++) {
-    //     thermostat.down();
-    //   }
-    //   thermostat.reset();
-    //   expect(thermostat.getTemperature()).toBe(20)
-    // });
+    it(`resets temp back to 20, or initial temp when temp is below 20`, () => {
+      let thermostat = new Thermostat();
+      for (let i = 0 ; i < 10 ; i++) {
+        thermostat.down();
+      }
+      thermostat.reset();
+      expect(thermostat.getTemperature()).toBe(20)
+    });
 
   });
 
-  // describe(`.energyUsage`, () => {
-  //   it(`tells you energyUsage is low-usage if below 18`, () => {
+  // describe(`.currentEnergyUsage`, () => {
+  //   it(`tells you currentEnergyUsage is low-usage if below 18`, () => {
   //     for (let i = 0 ; i < 5 ; i++) {
   //       thermostat.down();
   //     }
-  //     expect(thermostat.energyUsage()).toEqual('low-usage')
+  //     expect(thermostat.currentEnergyUsage()).toEqual('low-usage')
   //   });
 
-  //   it(`tells you energyUsage is medium-usage if equal to or below 25`, () => {
+  //   it(`tells you currentEnergyUsage is medium-usage if equal to or below 25`, () => {
   //     for (let i = 0 ; i < 5 ; i++) {
   //       thermostat.up();
   //     }
-  //     expect(thermostat.energyUsage()).toEqual('medium-usage')
+  //     expect(thermostat.currentEnergyUsage()).toEqual('medium-usage')
   //   });
 
-  //   it(`tells you energyUsage is high-usage if above 26`, () => {
+  //   it(`tells you currentEnergyUsage is high-usage if above 26`, () => {
   //     for (let i = 0 ; i < 6 ; i++) {
   //       thermostat.up();
   //     }
-  //     expect(thermostat.energyUsage()).toEqual('high-usage')
+  //     expect(thermostat.currentEnergyUsage()).toEqual('high-usage')
   //   });
   // });
 });
