@@ -10,7 +10,11 @@ class Thermostat {
   }
 
   up() {
-    this.temperature ++;
+    if ((this.PSM === true) && (this.temperature < 25)) {
+      this.temperature ++;
+    } else if ((this.PSM === true) && (this.temperature >= 25)) {
+      return `PSM is on. Max temp: 25`;
+    }
   }
 
   down() {
