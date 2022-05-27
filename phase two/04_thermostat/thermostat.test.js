@@ -54,42 +54,43 @@ describe(`Thermostat`, () => {
     });
   });
 
-  // describe(`.setPowerSavingMode`, () => {
-  //   it(`PoweverSavingMode is on by default`, () => {
-  //     expect(thermostat.setPowerSavingMode()).toBe(true)
-  //   });
+  describe(`.setPowerSavingMode`, () => {
+    it(`PoweverSavingMode is on by default`, () => {
+      let thermostat = new Thermostat();
+      expect(thermostat.setPowerSavingMode(true)).toBe(true)
+    });
 
-  //   it(`PoweverSavingMode can be switched to false`, () => {
-  //     thermostat.setPowerSavingMode(false);
-  //     expect(thermostat.setPowerSavingMode()).toBe(false)
-  //   });
+    // it(`PoweverSavingMode can be switched to false`, () => {
+    //   thermostat.setPowerSavingMode(false);
+    //   expect(thermostat.setPowerSavingMode()).toBe(false)
+    // });
 
-  //   it(`can be set to true (on), max temp is now 25`, () => {
-  //     for (let i = 0 ; i < 6 ; i++) {
-  //       thermostat.up();
-  //     }
-  //     // should throw error saying can't go above 25 while PowerSavingMode is on
-  //     thermostat.setPowerSavingMode(true);
-  //     expect(thermostat.getTemperature()).toBe(25)
-  //   });
+    // it(`can be set to true (on), max temp is now 25`, () => {
+    //   for (let i = 0 ; i < 6 ; i++) {
+    //     thermostat.up();
+    //   }
+    //   // should throw error saying can't go above 25 while PowerSavingMode is on
+    //   thermostat.setPowerSavingMode(true);
+    //   expect(thermostat.getTemperature()).toBe(25)
+    // });
 
-  //   it(`can be set to false (off), max temp is now 32`, () => {
-  //     thermostat.setPowerSavingMode(false);
-  //     for (let i = 0 ; i < 12 ; i++) {
-  //       thermostat.up();
-  //     }
-  //     expect(thermostat.getTemperature()).toBe(32)
-  //   });
+    // it(`can be set to false (off), max temp is now 32`, () => {
+    //   thermostat.setPowerSavingMode(false);
+    //   for (let i = 0 ; i < 12 ; i++) {
+    //     thermostat.up();
+    //   }
+    //   expect(thermostat.getTemperature()).toBe(32)
+    // });
 
-  //   it(`when PowerSavingMode is turned on when the temp is above 25, it will set the temp back to 25`, () => {
-  //     thermostat.setPowerSavingMode(false);
-  //     for (let i = 0 ; i < 10 ; i++) {
-  //       thermostat.up();
-  //     }
-  //     thermostat.setPowerSavingMode(true);
-  //     expect(thermostat.getTemperature()).toBe(25)
-  //   });
-  // });
+    // it(`when PowerSavingMode is turned on when the temp is above 25, it will set the temp back to 25`, () => {
+    //   thermostat.setPowerSavingMode(false);
+    //   for (let i = 0 ; i < 10 ; i++) {
+    //     thermostat.up();
+    //   }
+    //   thermostat.setPowerSavingMode(true);
+    //   expect(thermostat.getTemperature()).toBe(25)
+    // });
+  });
   
   // describe(`.reset`, () => {
   //   it(`resets temp back to 20, or initial temp when temp is above 20`, () => {
