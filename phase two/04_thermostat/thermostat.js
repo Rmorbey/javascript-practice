@@ -24,8 +24,10 @@ class Thermostat {
   setPowerSavingMode(status) {
     if (status === true) {
       this.PSM = true;
-    } else (status === false); {
+    } else if (status === false) {
       this.PSM = false;
+    } else {
+      return `Status not valid`
     }
   }
 

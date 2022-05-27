@@ -61,10 +61,10 @@ describe(`Thermostat`, () => {
       expect(thermostat.PSM).toBe(true)
     });
 
-    // it(`PoweverSavingMode can be switched to false`, () => {
-    //   thermostat.setPowerSavingMode(false);
-    //   expect(thermostat.setPowerSavingMode()).toBe(false)
-    // });
+    it(`PoweverSavingMode can be switched to false`, () => {
+      thermostat.setPowerSavingMode(false);
+      expect(thermostat.PSM).toBe(false)
+    });
 
     // it(`can be set to true (on), max temp is now 25`, () => {
     //   for (let i = 0 ; i < 6 ; i++) {
