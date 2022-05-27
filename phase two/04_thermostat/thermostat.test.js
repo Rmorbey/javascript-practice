@@ -37,12 +37,12 @@ describe(`Thermostat`, () => {
 
   });
 
-  // describe(`.up`, () => {
-  //   it(`increases the temp by 1`, () => {
-  //     thermostat.up();
-  //     expect(thermostat.getTemperature()).toBe(21)
-  //   });
-  // });
+  describe(`.up`, () => {
+    it(`increases the temp by 1`, () => {
+      thermostat.up();
+      expect(thermostat.getTemperature()).toBe(21)
+    });
+  });
 
   // describe(`.down`, () => {
   //   it(`decreases the temp by 1`, () => {
