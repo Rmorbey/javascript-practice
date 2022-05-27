@@ -3,10 +3,9 @@ const Thermostat = require('./thermostat');
 
 
 describe(`Thermostat`, () => {
-  let thermostat = new Thermostat();
-
   describe(`.getTemperature`, () => {
     it(`starts with an initial temperature of 20`, () => {
+      let thermostat = new Thermostat();
       expect(thermostat.getTemperature()).toBe(20)
     });
 
@@ -39,6 +38,7 @@ describe(`Thermostat`, () => {
 
   describe(`.up`, () => {
     it(`increases the temp by 1`, () => {
+      let thermostat = new Thermostat();
       thermostat.up();
       expect(thermostat.getTemperature()).toBe(21)
     });
@@ -46,6 +46,7 @@ describe(`Thermostat`, () => {
 
   describe(`.down`, () => {
     it(`decreases the temp by 1`, () => {
+      let thermostat = new Thermostat();
       thermostat.down();
       expect(thermostat.getTemperature()).toBe(19)
     });

@@ -5,11 +5,15 @@ class Thermostat {
   }
 
   getTemperature() {
-    return this.temperature
+    return this.temperature;
   }
 
   up() {
-    this.temperature ++
+    this.temperature ++;
+  }
+
+  down() {
+    this.temperature --;
   }
 
 }
