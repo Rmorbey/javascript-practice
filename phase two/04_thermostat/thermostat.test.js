@@ -136,6 +136,7 @@ describe(`Thermostat`, () => {
 
     it(`tells you currentEnergyUsage is high-usage if above 26`, () => {
       let thermostat = new Thermostat();
+      thermostat.setPowerSavingMode(false);
       for (let i = 0 ; i < 6 ; i++) {
         thermostat.up();
       }

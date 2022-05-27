@@ -46,6 +46,8 @@ class Thermostat {
       return `low-usage`;
     } else if ((this.temperature >= 18) && (this.temperature <= 25)) {
       return `medium-usage`;
+    } else if ((this.temperature > 25) && (this.temperature <= 32)) {
+      return `high-usage`;
     }
   }
 
