@@ -76,13 +76,15 @@ describe(`Thermostat`, () => {
       expect(thermostat.getTemperature()).toBe(25)
     });
 
-    // it(`can be set to false (off), max temp is now 32`, () => {
-    //   thermostat.setPowerSavingMode(false);
-    //   for (let i = 0 ; i < 12 ; i++) {
-    //     thermostat.up();
-    //   }
-    //   expect(thermostat.getTemperature()).toBe(32)
-    // });
+    it(`can be set to false (off), max temp is now 32`, () => {
+      let thermostat = new Thermostat();
+      thermostat.setPowerSavingMode(false);
+      for (let i = 0 ; i < 12 ; i++) {
+        thermostat.up();
+      }
+      expect(thermostat.up()).toEqual(`PSM is off. Max temp: 32`)
+      expect(thermostat.getTemperature()).toBe(32)
+    });
 
     // it(`when PowerSavingMode is turned on when the temp is above 25, it will set the temp back to 25`, () => {
     //   thermostat.setPowerSavingMode(false);
